@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Funnel+Display:wght@300..800&display=swap');
+
+
+/* -----------------------------------GLOBAL */
+.g-website {
+    background-image: linear-gradient(to right, #6D466B,#573450 );
+    font-family: "Funnel Display", Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    color: #EAD7D7;
+    margin:0px;
+    height:90vh;
+}
+
+main a{
+    color:#91739C;
+    display:block;
+    text-decoration:none;
+}
+
+main a:hover{
+    color:#EAD7D7;
+    background-color:#412234;
+    #g-arrow{
+        color:#EAD7D7;
+    }
+}
+.g-header a{
+    text-decoration:none;
+    color: #412234;
+}
+
+.g-header a:hover{
+    color:#EAD7D7;
+}
+.g-arrow1{
+    color:#6b4569;
+}
+
+.g-arrow2{
+    color:#664163;
+}
+.g-arrow3{
+    color:#613c5c;
+}
+
+
+.g-header{
+    font-family:"Bonheur Royale",Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right, #6D466B,#573450 );
+    font-size:5rem;
+    grid-area:head;
+    padding:1rem;
+    padding-right:0rem;
+}
+
+.g-borderSelect{
+    border-top:dotted #412234;
+}
+
+.g-borderSelectEnd{
+    border-bottom:dotted #412234;
+}
+
+
+#g-page{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    align-self:start;
+    max-width:100%;
+    grid-template-areas:
+    "head"
+    "main";     
+}
+#g-menu{
+    grid-area:nav;
+    height:100%;
+    margin-right:1rem;
+    font-size:1rem;
+    text-align:center;
+    background-image: linear-gradient(to bottom, #6D466B,#4C2B42 );
+}
+.g-currentPageButton a{
+    color:#EAD7D7;
+    background-color:#412234;
+    .g-arrow{
+        opacity:100;
+    }
+}
+table {
+    border-collapse: collapse;
+}
+td {
+    border-style:dotted;
+}
+.g-subheader{
+    font-size:2.7rem;
+    grid-area:sh;
+    justify-self:center;
+    align-self:center;
+    border-bottom:dashed;
+    padding:1rem;
+}
+
+.g-subheader2{
+    font-size:1.5rem;
+    justify-self:center;
+    border-bottom:dashed;
+    align-self:center;
+    padding:1rem;
+}
+
+#p-resume .g-subheader{
+    justify-self:start;
+}
+
+.g-webImages{
+    border:solid #412234;
+}
+/* ---------------------------------multi page styling*/
+
+section{
+    grid-area:sec;
+}
+
+
+/* --------------------------home page styling */
+
+
+#p-homePage section #s-blurbA{
+    grid-area:a;
+    text-wrap: wrap;
+    text-align:start;
+    margin-right:1rem;
+    margin-left:1rem;
+    margin-bottom:3rem;
+}
+
+#p-homePage section #s-blurbB{
+    grid-area:b;
+    text-wrap:wrap;
+    text-align:start;
+    margin-right:1rem;
+}
+
+
+#p-homePage section #s-photo1{
+    grid-area:p1;
+    display:block;
+    border:solid;
+    width:10rem;
+    height:10rem;
+}
+
+
+#p-homePage section #s-photo2{
+    grid-area:p2;
+    display:block;
+    border:solid;
+    width:10rem;
+    height:10rem;
+    /* margin-right:1rem; */
+}
+
+#p-homePage main{
+    align-self:start;
+    background-image: linear-gradient(to bottom, #91739C,#6D466B );
+    min-height:88vh;
+    display:grid;
+    margin-right:2rem;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+    "nav sh sh sh sh"
+    "nav sec sec sec sec"
+    "nav sec sec sec sec"
+    "nav sec sec sec sec";
+}
+
+#p-homePage section{
+    display:grid;
+    grid-template-columns: auto 4fr auto;
+    grid-template-rows: auto .4fr;
+    align-self:start;
+    margin-left:2rem;
+    margin-right:2rem;
+    grid-template-areas:
+        "p1 a a"
+        "b b p2"   
+}
+
+
+/* ---------------------Resume page styling */
+#p-resumePage main{
+    display:flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    /* font-size:1rem; */
+}
+#p-resumePage #sec1{
+    grid-area:s1;
+}
+#p-resumePage #sec2{
+    grid-area:s2;
+}
+#p-resumePage #sec3{
+    grid-area:s3;
+}
+#p-resumePage #sec4{
+    grid-area:s4;
+}
+#p-resumePage #sec5{
+    grid-area:s5;
+}
+
+
+#p-resumePage main{
+    align-self:start;
+    background-image: linear-gradient(to bottom, #91739C,#6D466B );
+    /* min-height:88vh; */
+    font-size:1rem;
+    padding-right:1rem;
+    margin-right:2rem;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+    "nav s1 s1 s1 s1"
+    "nav s2 s2 s2 s2"
+    "nav s3 s3 s3 s3"
+    "nav s4 s4 s4 s4"
+    "nav s5 s5 s5 s5";
+}
+
+
+/* --------------------------------web app page styling */
+#s-previous{
+    grid-area:prev;
+    align-self:center;
+    justify-self:end;
+    margin-right:2rem;
+    font-size:2rem;
+}
+#s-photo{
+    grid-area:photo;
+    width:150%;
+    height:150%;
+}
+
+#s-sampleTitle{
+    grid-area:tit;
+    justify-self:center;
+    margin-bottom:1rem;
+}
+#s-sampleInfo{
+    grid-area:inf;
+    font-size:1rem;
+}
+#s-next{
+    grid-area:next;
+    align-self:center;
+    margin-left:2rem;
+    font-size:2rem;
+}
+#p-webPage main{
+    align-self:start;
+    background-image: linear-gradient(to bottom, #91739C,#6D466B );
+    min-height:88vh;
+    display:grid;
+    margin-right:2rem;
+    padding-right:2rem;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+    "nav sh sh sh sh"
+    "nav sec sec sec sec"
+    "nav sec sec sec sec"
+    "nav sec sec sec sec";
+}
+#p-webPage section a{
+    color:#EAD7D7;
+}
+
+
+#p-webPage section a:hover{
+    background-color:transparent;
+    color:#412234;
+}
+
+#p-webPage section{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:auto auto auto; 
+    align-self:start;
+    margin-left:2rem;
+    margin-right:2rem;
+    justify-self:center;
+    grid-template-areas:
+        ". tit ."
+        "prev photo next"
+        ". inf ."   
+}
+
+
+/* ------------------other page */
+
+#p-otherPage #s-rat1{
+    grid-area:r1;
+}
+#p-otherPage #s-rat2{
+    grid-area:r2;
+}
+#p-otherPage #s-rat3{
+    grid-area:r3;
+}
+.g-ratImages{
+    height:7rem;
+    width:auto;
+    align-self: center;
+    margin-bottom:2rem;
+    margin-right:2rem;
+    border:solid #412234;
+}
+#p-otherPage #s-rat1Blurb{
+    grid-area:rb1;
+    font-size:1rem;
+}
+
+#p-otherPage #s-rat2Blurb{
+    grid-area:rb2;
+    font-size:1rem;
+}
+#p-otherPage #s-rat3Blurb{
+    grid-area:rb3;
+    font-size:1rem;
+}
+
+#p-otherPage main{
+    align-self:start;
+    background-image: linear-gradient(to bottom, #91739C,#6D466B );
+    min-height:88vh;
+    display:grid;
+    margin-right:2rem;
+    padding-right:2rem;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+    "nav sh sh sh sh"
+    "nav sec sec sec sec"
+    "nav sec sec sec sec"
+    "nav sec sec sec sec";
+}
+
+#p-otherPage section{
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows:auto auto auto; 
+    align-self:start;
+    margin-left:2rem;
+    margin-right:2rem;
+    justify-self:center;
+    grid-template-areas:
+         "r1 rb1"
+         "r2 rb2"
+         "r3 rb3";
+}
+/* ------------------------------Media queries */
+
+@media(max-width: 1048px){
+    #p-homePage section #s-photo2{
+        height:10rem;
+        width:10rem;
+        justify-self:center;
+    }
+
+    #p-homePage section #s-photo1{
+        height:10rem;
+        width:10rem;
+        justify-self:center;
+    }
+    #p-homePage section{
+        font-size:1rem;
+        margin:0px;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        align-self:start;
+        margin-left:2rem;
+        margin-right:2rem;
+        margin-top:1rem;
+        margin-bottom:2rem;
+        grid-template-areas:
+            "p1 p2"
+            "a b";
+    }
+    #p-homePage section #s-blurbA{
+        padding-right:1rem;
+        padding-left:1rem;
+    }
+    #p-homePage section #s-blurbB{
+        padding-right:1rem;
+        padding-left:1rem;
+    }
+}
+
+@media(max-width:800px){
+    #p-homePage section #s-photo1{
+        margin:0px;
+        width:8rem;
+        height:8rem;
+    }
+    #p-homePage section #s-photo2{
+        margin:0px;
+        width:8rem;
+        height:8rem;
+    }
+    #p-homePage section{
+        margin:0px;
+        font-size:0.7rem;
+    }
+}
+@media(max-width:700px){
+    .g-webImages{
+        width:15rem;
+        height:15rem;
+    }
+}
+@media(max-width:600px){
+    .g-webImages{
+        width:12rem;
+        height:12rem;
+    }
+}
+
+@media(max-width:550px){
+    #p-otherPage section{
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:auto auto auto auto auto auto; 
+        align-self:start;
+        /* margin-left:2rem;
+        margin-right:2rem; */
+        justify-content:center;
+        grid-template-areas:
+             "r1"
+             "rb1"
+             "r2"
+             "rb2"
+             "r3"
+             "rb3";
+    }
+    .g-ratImages{
+        margin:0rem;
+        margin-bottom:1rem;
+        justify-self:center;
+        margin-top:3rem;
+    }
+    .g-ratBlurbs{
+        margin:0rem;
+        justify-self:center;
+        padding-bottom:2rem;
+        border-bottom:solid #6d466B;
+    }
+}
